@@ -1,0 +1,4 @@
+.venv/
+*.mat
+.DS_Store
+notebooks/scratch.ipynb
