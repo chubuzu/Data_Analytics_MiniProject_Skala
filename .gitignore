@@ -1,5 +1,6 @@
 .venv/
-*.mat
 .DS_Store
 notebooks/scratch.ipynb
 data/processed/*.npz
+data/processed/*.csv
+data/*.mat
