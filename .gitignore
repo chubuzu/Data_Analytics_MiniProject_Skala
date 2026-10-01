@@ -2,3 +2,4 @@
 *.mat
 .DS_Store
 notebooks/scratch.ipynb
+data/processed/*.npz
