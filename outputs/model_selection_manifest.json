@@ -1,0 +1,328 @@
+{
+  "recorded_at": "2026-10-01T18:04:16.676105+09:00",
+  "purpose": "Exploratory candidate selection using Batch1-3; no independent final test",
+  "python": "3.11.15",
+  "python_executable": "/Users/u102/workspace_public/021_Data_Analytics_Mini_Projcet/Data_Analytics_MiniProject_Skala/.venv/bin/python",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "h5py": "3.16.0",
+    "jupyter": "1.1.1",
+    "ipykernel": "7.4.0"
+  },
+  "requirements_sha256": "b2c57a7e0d2fe44563feb44a7e36c330367af19bced31b349afeb0b499c182b9",
+  "notebook_source_sha256": "ee58bf54acc59da07e6512c76648826f77e694e652286475379782ac5933449f",
+  "seed": 42,
+  "prediction_cycle": 100,
+  "features": [
+    "log10_dqv_var"
+  ],
+  "target": "log10(cycle_life), converted back to cycles for metrics",
+  "n_cells": 139,
+  "n_labeled": 129,
+  "n_missing_life": 10,
+  "life_review_cells": [
+    {
+      "batch": "batch1",
+      "cell_id": 1
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 2
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 3
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 4
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 5
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 9
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 11
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 13
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 14
+    },
+    {
+      "batch": "batch1",
+      "cell_id": 23
+    }
+  ],
+  "batch_dates": [
+    {
+      "batch": "batch1",
+      "batch_date": "2017-05-12"
+    },
+    {
+      "batch": "batch2",
+      "batch_date": "2018-02-20"
+    },
+    {
+      "batch": "batch3",
+      "batch_date": "2018-04-12"
+    }
+  ],
+  "forward_validation": [
+    {
+      "model": "Median baseline",
+      "train_batches": "batch1",
+      "validation_batch": "batch2",
+      "n": 39,
+      "train_MAE_cycles": 145.93478260869568,
+      "MAE_cycles": 342.1656922472142,
+      "RMSE_cycles": 365.8047618006648,
+      "R2": -1.7815395595978245,
+      "bias_cycles": 292.7550998302501
+    },
+    {
+      "model": "Ridge",
+      "train_batches": "batch1",
+      "validation_batch": "batch2",
+      "n": 39,
+      "train_MAE_cycles": 77.8048265338273,
+      "MAE_cycles": 172.68701051632323,
+      "RMSE_cycles": 182.64092429524902,
+      "R2": 0.3066017766708766,
+      "bias_cycles": 151.31029140028278
+    },
+    {
+      "model": "Random Forest",
+      "train_batches": "batch1",
+      "validation_batch": "batch2",
+      "n": 39,
+      "train_MAE_cycles": 44.24913564853409,
+      "MAE_cycles": 152.732092071279,
+      "RMSE_cycles": 165.88617413728855,
+      "R2": 0.4279856631710548,
+      "bias_cycles": 146.8584837258051
+    },
+    {
+      "model": "Median baseline",
+      "train_batches": "batch1+batch2",
+      "validation_batch": "batch3",
+      "n": 44,
+      "train_MAE_cycles": 210.2941176470588,
+      "MAE_cycles": 364.75000000000034,
+      "RMSE_cycles": 471.9837006045483,
+      "R2": -1.3138726952180395,
+      "bias_cycles": -355.6590909090912
+    },
+    {
+      "model": "Ridge",
+      "train_batches": "batch1+batch2",
+      "validation_batch": "batch3",
+      "n": 44,
+      "train_MAE_cycles": 103.21324782177642,
+      "MAE_cycles": 171.992588359785,
+      "RMSE_cycles": 260.98434143772215,
+      "R2": 0.2925196830758696,
+      "bias_cycles": -122.72937926732708
+    },
+    {
+      "model": "Random Forest",
+      "train_batches": "batch1+batch2",
+      "validation_batch": "batch3",
+      "n": 44,
+      "train_MAE_cycles": 52.52951511854799,
+      "MAE_cycles": 178.4099449879054,
+      "RMSE_cycles": 272.16938097536934,
+      "R2": 0.23057908014265738,
+      "bias_cycles": -126.040884548535
+    }
+  ],
+  "forward_validation_summary": [
+    {
+      "model": "Median baseline",
+      "n": 83,
+      "all_cells_MAE": 354.1380963571249
+    },
+    {
+      "model": "Random Forest",
+      "n": 83,
+      "all_cells_MAE": 166.34444783430985
+    },
+    {
+      "model": "Ridge",
+      "n": 83,
+      "all_cells_MAE": 172.3188831080379
+    }
+  ],
+  "batch_validation": [
+    {
+      "model": "Median baseline",
+      "validation_batch": "batch1",
+      "n": 46,
+      "MAE_cycles": 150.3695652173913
+    },
+    {
+      "model": "Ridge",
+      "validation_batch": "batch1",
+      "n": 46,
+      "MAE_cycles": 144.78442457620915
+    },
+    {
+      "model": "Random Forest",
+      "validation_batch": "batch1",
+      "n": 46,
+      "MAE_cycles": 117.04989922416735
+    },
+    {
+      "model": "Median baseline",
+      "validation_batch": "batch2",
+      "n": 39,
+      "MAE_cycles": 357.78194559845167
+    },
+    {
+      "model": "Ridge",
+      "validation_batch": "batch2",
+      "n": 39,
+      "MAE_cycles": 158.45201258017298
+    },
+    {
+      "model": "Random Forest",
+      "validation_batch": "batch2",
+      "n": 39,
+      "MAE_cycles": 164.4497735639831
+    },
+    {
+      "model": "Median baseline",
+      "validation_batch": "batch3",
+      "n": 44,
+      "MAE_cycles": 364.75000000000034
+    },
+    {
+      "model": "Ridge",
+      "validation_batch": "batch3",
+      "n": 44,
+      "MAE_cycles": 171.992588359785
+    },
+    {
+      "model": "Random Forest",
+      "validation_batch": "batch3",
+      "n": 44,
+      "MAE_cycles": 178.4099449879054
+    }
+  ],
+  "data_snapshot": [
+    {
+      "path": "data/Batch1.mat",
+      "bytes": 3025320241,
+      "sha256": "9d928ab978f0e3c70b31cb833a749fedd35094d01af76475d69b40aa3497f5ba"
+    },
+    {
+      "path": "data/processed/batch1_cells.csv",
+      "bytes": 1101,
+      "sha256": "e9ad826521d40e93727666e94b26a46572bb983cbd971c99be98709c2022a314"
+    },
+    {
+      "path": "data/processed/batch1_cycle_summary.csv",
+      "bytes": 3700230,
+      "sha256": "fba5f396731f93f3de76291102d2da684dbd08c4e9c1ad82fb5d690c5d7b8e7a"
+    },
+    {
+      "path": "data/processed/batch1_cycle_profiles.npz",
+      "bytes": 799245833,
+      "sha256": "adf52da4cdc6474045fa0f83ccb544b8d4b8ccbbc37497de3a83f7a299f0be9f"
+    },
+    {
+      "path": "data/processed/batch1_vdlin.csv",
+      "bytes": 18435,
+      "sha256": "adbf9448cd9af2a2fc851080ba934632281f15cf4f96d967ebd4a29aa1fcc1c5"
+    },
+    {
+      "path": "data/Batch2.mat",
+      "bytes": 2022599329,
+      "sha256": "3487db505ad08b6c805f41dd0560e73b54077c76aca04f706f06e2356ccf7845"
+    },
+    {
+      "path": "data/processed/batch2_cells.csv",
+      "bytes": 1332,
+      "sha256": "b9ba942820784708cbbc3adf73b867a0b34417864ce1ce5f2edd3a968dc8626b"
+    },
+    {
+      "path": "data/processed/batch2_cycle_summary.csv",
+      "bytes": 2747366,
+      "sha256": "1bbc71b81fb0c5a02b5e7e77a8474cb0d6d133616599ff1fba6216b64423daba"
+    },
+    {
+      "path": "data/processed/batch2_cycle_profiles.npz",
+      "bytes": 547255917,
+      "sha256": "3d9d8a32df1d20b6c0d3d7b53c88d1b5c4ec4bbf9373f60e038ddabbe7b6e4f1"
+    },
+    {
+      "path": "data/processed/batch2_vdlin.csv",
+      "bytes": 18435,
+      "sha256": "adbf9448cd9af2a2fc851080ba934632281f15cf4f96d967ebd4a29aa1fcc1c5"
+    },
+    {
+      "path": "data/Batch3.mat",
+      "bytes": 3236690412,
+      "sha256": "62c30e413b63e6144720e016deed3661fac8468641794a5807b123fe84717998"
+    },
+    {
+      "path": "data/processed/batch3_cells.csv",
+      "bytes": 1746,
+      "sha256": "7b4eed681fcb6e04ca35420d1fc96dbf77bec01a027744ba6c8dcc03a2a78bdc"
+    },
+    {
+      "path": "data/processed/batch3_cycle_summary.csv",
+      "bytes": 5301423,
+      "sha256": "a0adc1e59859b5f7fbea3592a56bd3eb63d13dc08b6dfc02326689d492a55afc"
+    },
+    {
+      "path": "data/processed/batch3_cycle_profiles.npz",
+      "bytes": 1050494675,
+      "sha256": "1dd9651d9307c5e47209ea3dcfb5128dac4bea83656d96d2b0e15ca324c1508e"
+    },
+    {
+      "path": "data/processed/batch3_vdlin.csv",
+      "bytes": 18435,
+      "sha256": "adbf9448cd9af2a2fc851080ba934632281f15cf4f96d967ebd4a29aa1fcc1c5"
+    }
+  ],
+  "candidate_model": "Random Forest regression",
+  "candidate_model_params": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 4,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 3,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 200,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "model_selection_status": "provisional; Batch1-3 cannot be reused as an independent final test",
+  "interpretation_updated_at": "2026-10-01T18:30:19.310041+09:00",
+  "execution_source_sha256": "9454aa498190a1dbbab70e197769af7ce5a6a10fa93d13b5e7cc2aa34b332781",
+  "results_rerun_after_interpretation_update": false
+}
