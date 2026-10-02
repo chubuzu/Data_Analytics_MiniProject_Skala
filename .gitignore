@@ -1,5 +1,13 @@
 .venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
 .DS_Store
+.env
+.env.*
+!.env.example
 notebooks/scratch.ipynb
 data/processed/*.npz
 data/processed/*.csv
