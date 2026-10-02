@@ -1,7 +1,7 @@
 구분,MAPE (%),비고
-Train (Batch1 CV),8.378952432373428,"학습 35개 셀, 프로토콜 5-fold 평균"
-Valid (Batch1 Hold-out),9.835509254905363,고정 검증 11개 셀
-Test (Batch2),45.02899798311633,배치 간 평가 33개 셀
-Gap (Train-Valid),1.456556822531935,Valid − Train CV (%p)
-Gap (Valid-Test),35.193488728210966,Test − Valid (%p)
-Gap (Target-Test),35.928997983116325,Test − 9.1 (%p)
+Train (Batch1 CV),7.597758645733431,"학습 35개 셀, 프로토콜 5-fold 평균"
+Valid (Batch1 Hold-out),11.631463489256445,고정 검증 11개 셀
+Test (Batch2),25.228591375355684,"고정 모델, 수명 확인 39개 셀"
+Gap (Train-Valid),4.033704843523014,Valid − Train CV (%p)
+Gap (Valid-Test),13.597127886099239,Test − Valid (%p)
+Gap (Target-Test),16.128591375355683,Test − 9.1 (%p)
