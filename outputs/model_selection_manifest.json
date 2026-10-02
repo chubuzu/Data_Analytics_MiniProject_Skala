@@ -1,6 +1,7 @@
 {
-  "recorded_at": "2026-10-01T18:04:16.676105+09:00",
+  "recorded_at": "2026-10-02T09:06:39.333573+09:00",
   "purpose": "Exploratory candidate selection using Batch1-3; no independent final test",
+  "model_selection_status": "superseded exploratory record; not the final DAY 2 model or independent final test",
   "python": "3.11.15",
   "python_executable": "/Users/u102/workspace_public/021_Data_Analytics_Mini_Projcet/Data_Analytics_MiniProject_Skala/.venv/bin/python",
   "platform": "macOS-27.0.1-arm64-arm-64bit",
@@ -23,6 +24,27 @@
     "log10_dqv_var"
   ],
   "target": "log10(cycle_life), converted back to cycles for metrics",
+  "candidate_model": "Random Forest regression",
+  "candidate_model_params": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 4,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 3,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 200,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
   "n_cells": 139,
   "n_labeled": 129,
   "n_missing_life": 10,
@@ -300,29 +322,5 @@
       "sha256": "adbf9448cd9af2a2fc851080ba934632281f15cf4f96d967ebd4a29aa1fcc1c5"
     }
   ],
-  "candidate_model": "Random Forest regression",
-  "candidate_model_params": {
-    "bootstrap": true,
-    "ccp_alpha": 0.0,
-    "criterion": "squared_error",
-    "max_depth": 4,
-    "max_features": 1.0,
-    "max_leaf_nodes": null,
-    "max_samples": null,
-    "min_impurity_decrease": 0.0,
-    "min_samples_leaf": 3,
-    "min_samples_split": 2,
-    "min_weight_fraction_leaf": 0.0,
-    "monotonic_cst": null,
-    "n_estimators": 200,
-    "n_jobs": 1,
-    "oob_score": false,
-    "random_state": 42,
-    "verbose": 0,
-    "warm_start": false
-  },
-  "model_selection_status": "provisional; Batch1-3 cannot be reused as an independent final test",
-  "interpretation_updated_at": "2026-10-01T18:30:19.310041+09:00",
-  "execution_source_sha256": "9454aa498190a1dbbab70e197769af7ce5a6a10fa93d13b5e7cc2aa34b332781",
-  "results_rerun_after_interpretation_update": false
+  "superseded_by": "outputs/model_metrics.json"
 }
